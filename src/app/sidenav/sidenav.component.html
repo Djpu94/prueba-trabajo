@@ -1,0 +1,45 @@
+<!--componente sidenav-->
+
+<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+  <mat-sidenav class="side" mode="side" opened>
+    <!--link del sidenav-->
+    <mat-nav-list>
+      <mat-list-item role="listitem">
+          <mat-icon aria-hidden="false">
+              <a routerLink="/home" routerLinkActive="active">home</a>
+          </mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+          <mat-icon aria-hidden="false" >
+            <a routerLink="/login" routerLinkActive="active">shopping_cart</a>
+          </mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+          <mat-icon aria-hidden="false" >
+            <a routerLink="/notification" routerLinkActive="active">notification_important</a>
+          </mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+          <mat-icon aria-hidden="false" >
+            <a routerLink="/favorites" routerLinkActive="active">star</a>
+          </mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+          <mat-icon aria-hidden="false" >
+            <a routerLink="/historial">folder</a>
+          </mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+          <mat-icon aria-hidden="false" >
+              <a routerLink="/account">account_circle</a>
+          </mat-icon>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>}
+  
+  <mat-sidenav-content>
+    <!--contenido de sidenav-->
+    <app-form></app-form>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

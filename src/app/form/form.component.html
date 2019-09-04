@@ -1,0 +1,91 @@
+<div class="header">
+    <img src="../assets/img/compra.jpg" alt="">
+      <h1>NEW SALE</h1>
+</div>
+
+<div class="document">
+  <h2>Document</h2>
+</div>
+
+<!--formulario document-->
+<form [formGroup]="document">
+  
+  <div formArrayName="clients" class="example-container" >
+        <mat-form-field class="form-inline">
+          <input matInput placeholder="Client"  formControlName="client">
+        </mat-form-field>
+        
+        <button mat-icon-button (click)="addclient()">
+              <mat-icon>add</mat-icon>
+        </button>
+           
+        <mat-form-field class="form-inline">    
+          <input matInput placeholder="Branch Ofice" formControlName="branch_ofice">
+        </mat-form-field>
+
+        <mat-form-field class="form-inline">
+          <input matInput placeholder="Currency"  formControlName="currency">
+        </mat-form-field>
+      </div>  
+</form>
+
+
+  <div class="document">
+    <h2>Details</h2>
+  </div>
+<!--formulario details-->
+<form [formGroup]="detail">
+  
+  <div class="example-container">
+    
+    <mat-form-field class="form-inline">
+        
+      <mat-label>Name</mat-label>
+      <mat-select formControlName="name" [(value)]="selected">          
+        <mat-option>Product</mat-option>
+        <mat-option value="option1">Option 1</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+      </mat-select>
+
+    </mat-form-field>
+
+    <mat-form-field class="form-inline">
+      <input formControlName="quantity" matInput placeholder="Quantity">
+    </mat-form-field>
+    
+    <mat-form-field class="form-inline">
+      <input formControlName="price" matInput placeholder="Price">
+    </mat-form-field>
+
+    <mat-form-field class="form-inline">
+      <input formControlName="subtotal" matInput placeholder="Subtotal">
+    </mat-form-field>
+  
+    <button mat-icon-button>
+        <mat-icon>delete</mat-icon>
+    </button>
+  </div>  
+</form>  
+ <!--botones-->
+  <div class="addbutton">
+    <button class="add" mat-raised-button>
+      Add
+    <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <mat-form-field class="total">
+      <input matInput placeholder="Total">
+  </mat-form-field>
+
+  <div class="saveButton">
+    <button mat-raised-button>
+      Save
+      <mat-icon>save</mat-icon>
+    </button>
+  </div>
+  {{document.value |json}}
+  {{detail.value |json}}
+
+

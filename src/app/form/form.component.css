@@ -1,0 +1,71 @@
+body{
+    padding: 5%;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.document{
+    width: 70%;
+    display: flex;
+    justify-content: start;
+    border-bottom: 2px solid rgba(80, 136, 146, 0.479);
+    margin-left: 14%;
+}
+
+h2{
+    width: 65%;
+    
+}
+
+img{
+    width: 10%;
+}
+
+h1{
+    width: 80%;
+    border-bottom: 2px solid rgba(80, 136, 146, 0.479);
+}
+
+
+
+.example-container {
+    display: flex;
+    flex-direction: row;
+    width: 74%;
+    padding-left: 10%;
+    padding-right:10%;
+  }
+
+.form-inline {
+    width: 100%;
+    padding-left:5%; 
+}
+
+.addbutton{
+    padding-top: 2%;
+    padding-left: 14%;
+}
+
+.add{
+    background-color:  #279aff;
+}
+
+.total{
+    padding-left: 67%;
+}
+
+.saveButton{
+    padding-left: 68%;
+}
+
+.save{
+    width: 35%;
+    background-color:  #279aff;
+}
+.alerta{
+    color: red;
+}
